@@ -1,26 +1,54 @@
 <?php
-// Check if form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Retrieve form data
+    // Collect form data
     $post_applied = $_POST['post_applied'];
     $name = $_POST['name'];
     $whatsapp_number = $_POST['whatsapp_number'];
-    // Add similar lines for other form fields
+    $age = $_POST['age'];
+    $qualification = $_POST['qualification'];
+    $experience = $_POST['experience'];
+    $present_company = $_POST['present_company'];
+    $present_salary = $_POST['present_salary'];
+    $residing_location = $_POST['residing_location'];
+    $expected_salary = $_POST['expected_salary'];
+    $marital_status = $_POST['marital_status'];
+    $num_children = $_POST['num_children'];
+    $job_location = $_POST['job_location'];
+    $sales_engineer_location = $_POST['sales_engineer_location'];
 
-    // Process the data (e.g., store in database, send email, etc.)
-    // Example: Store data in a text file
-    $data = "Post Applied: $post_applied\nName: $name\nWhatsApp Number: $whatsapp_number\n";
-    // Add similar lines for other form fields
+    // Compose email message
+    $to = "ayaan.homegeniegroup@gmail.com"; // Change this to your email address
+    $subject = "New Job Application Submission";
+    $message = "Post Applied For: $post_applied\n";
+    $message .= "Name: $name\n";
+    $message .= "Whatsapp Number: $whatsapp_number\n";
+    $message .= "Age: $age\n";
+    $message .= "Qualification: $qualification\n";
+    $message .= "Over all working experience: $experience\n";
+    $message .= "Present Company: $present_company\n";
+    $message .= "Present Monthly Salary: $present_salary\n";
+    $message .= "Present Residing Location: $residing_location\n";
+    $message .= "Expected Salary Per Month: $expected_salary\n";
+    $message .= "Marital Status: $marital_status\n";
+    $message .= "Number Of Children If Any: $num_children\n";
 
-    // Write data to a text file (you can modify this to store in a database)
-    $file = fopen("form_data.txt", "a"); // Open file in append mode
-    fwrite($file, $data); // Write data to file
-    fclose($file); // Close file
+    if ($post_applied == "Telecalling") {
+        $message .= "Job Location: $job_location\n";
+    } elseif ($post_applied == "Sales engineer") {
+        $message .= "Job Location for Sales Engineer: $sales_engineer_location\n";
+    }
 
-    // Provide feedback to user
-    echo "Thank you for your application! We will get in touch with you soon.";
+    // Send email
+    $headers = "From: your-email@example.com\r\n";
+    $headers .= "Reply-To: your-email@example.com\r\n";
+    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+
+    if (mail($to, $subject, $message, $headers)) {
+        echo "Email sent successfully!";
+    } else {
+        echo "Error: Email not sent.";
+    }
 } else {
-    // If form is not submitted, redirect user back to the form page or show an error message
-    echo "Error: Form not submitted.";
+    echo "Error: Invalid request.";
 }
 ?>
