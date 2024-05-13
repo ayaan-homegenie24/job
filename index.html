@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Application Form</title>
     <link rel="stylesheet" href="styles.css">
-	    <!-- Include Google API client library -->
-    <script src="https://script.google.com/macros/library/d/1WjoGLqe4qXGY1WJ0tHh_MmttXGpsFGct5lNBGc6X4jL7x5DA0rDtG0Go/3"></script>
 </head>
 <body>
 <header>
@@ -75,11 +73,11 @@
         </div>
         <div class="form-group">
             <label for="resume">Attach Your Updated Resume:<span class="mandatory-symbol">*</span></label><br>
-            <input type="file" id="resume" name="resume" required><br>
+            <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required><br>
         </div>
         <div class="form-group">
             <label for="photo">Attach Your Recent Photo:<span class="mandatory-symbol">*</span></label><br>
-            <input type="file" id="photo" name="photo" required><br>
+            <input type="file" id="photo" name="photo" accept="image/jpeg,image/png,image/gif" required><br>
         </div>
         <div class="form-group" id="job_location" style="display: none;">
             <label for="job_location">Job Location:<span class="mandatory-symbol">*</span></label><br>
