@@ -23,42 +23,52 @@
             <input type="radio" id="scm" name="post_applied" value="SCM (Logistics)" onchange="toggleLocation('scm')" required>
             <label for="scm">SCM (Logistics)</label>
         </div>
+
         <div class="form-group">
             <label for="name">Name:<span class="mandatory-symbol">*</span></label><br>
             <input type="text" id="name" name="name" required><br>
         </div>
+        
         <div class="form-group">
             <label for="whatsapp_number">Whatsapp Number:<span class="mandatory-symbol">*</span></label><br>
             <input type="tel" id="whatsapp_number" name="whatsapp_number" required><br>
         </div>
+        
         <div class="form-group">
             <label for="age">Age:<span class="mandatory-symbol">*</span></label><br>
             <input type="number" id="age" name="age" required><br>
         </div>
+        
         <div class="form-group">
             <label for="qualification">Qualification:<span class="mandatory-symbol">*</span></label><br>
             <input type="text" id="qualification" name="qualification" required><br>
         </div>
+        
         <div class="form-group">
             <label for="experience">Over all working experience:<span class="mandatory-symbol">*</span></label><br>
             <input type="text" id="experience" name="experience" required><br>
         </div>
+        
         <div class="form-group">
             <label for="present_company">Present Company:<span class="mandatory-symbol">*</span></label><br>
             <input type="text" id="present_company" name="present_company" required><br>
         </div>
+        
         <div class="form-group">
             <label for="present_salary">Present Monthly Salary:<span class="mandatory-symbol">*</span></label><br>
             <input type="text" id="present_salary" name="present_salary" required><br>
         </div>
+        
         <div class="form-group">
             <label for="residing_location">Present Residing Location:<span class="mandatory-symbol">*</span></label><br>
             <input type="text" id="residing_location" name="residing_location" required><br>
         </div>
+        
         <div class="form-group">
             <label for="expected_salary">Expected Salary Per Month:<span class="mandatory-symbol">*</span></label><br>
             <input type="text" id="expected_salary" name="expected_salary" required><br>
         </div>
+        
         <div class="form-group">
             <label for="marital_status">Marital Status:<span class="mandatory-symbol">*</span></label><br>
             <select id="marital_status" name="marital_status" required>
@@ -66,10 +76,22 @@
                 <option value="Single">Single</option>
             </select><br>
         </div>
+        
         <div class="form-group">
             <label for="num_children">Number Of Children If Any:<span class="mandatory-symbol">*</span></label><br>
             <input type="number" id="num_children" name="num_children" required><br>
         </div>
+        
+        <div class="form-group">
+            <label for="resume">Attach Your Updated Resume:<span class="mandatory-symbol">*</span></label><br>
+            <input type="file" id="resume" name="resume" required><br>
+        </div>
+        
+        <div class="form-group">
+            <label for="photo">Attach Your Recent Photo:<span class="mandatory-symbol">*</span></label><br>
+            <input type="file" id="photo" name="photo" required><br>
+        </div>
+        
         <div class="form-group" id="job_location" style="display: none;">
             <label for="job_location">Job Location:<span class="mandatory-symbol">*</span></label><br>
             <p class="location-description">Position only hiring in this location</p>
@@ -77,6 +99,7 @@
                 <option value="Chennai">Chennai</option>
             </select><br>
         </div>
+        
         <div class="form-group" id="sales_engineer_location" style="display: none;">
             <label for="sales_engineer_location">Job Location for Sales Engineer:<span class="mandatory-symbol">*</span></label><br>
             <p class="location-description">Position only hiring in the following locations</p>
@@ -91,6 +114,7 @@
                 <option value="Vellore">Vellore</option>
             </select><br>
         </div>
+        
         <div class="form-group">
             <button type="submit">Submit</button>
         </div>
